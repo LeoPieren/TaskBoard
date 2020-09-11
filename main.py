@@ -1,4 +1,5 @@
 import eel
+from package.Task import Task
 
 @eel.expose
 def hello():
@@ -6,10 +7,8 @@ def hello():
 
 @eel.expose
 def createTask(name, description):
-    print(name)
-    print(description)
-
-
+    task = Task(name, description)
+    task.writeToDb()
 
 eel.init("www")
 eel.start("index.html")
