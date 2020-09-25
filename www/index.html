@@ -1,13 +1,30 @@
 <html>
-    <head>
-        <script src="eel.js"></script>
-        <script src="translator.js"></script>
-    </head>
-    <body>
+
+<head>
+    <script src="eel.js"></script>
+    <script src="translator.js"></script>
+</head>
+
+<body>
+    <div>
         <form>
             <input type="text" name="taskName" id="taskName"> <br>
             <input type="text" name="taskDescription" id="taskDescription">
         </form>
         <button onclick="createTask()">create task</button>
-    </body>
+    </div>
+    <div class="">
+        <table>
+            <tr>
+                <th>To-Do</th>
+                <th>In Progress</th>
+                <th>Done</th>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
 </html>
