@@ -1,29 +1,36 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="css/sytle.css">
     <script src="eel.js"></script>
     <script src="translator.js"></script>
 </head>
 
 <body>
     <div>
+        <script>
+            var i;
+            for (i = 1; i < 10; i++) {
+                document.write(i)
+            }
+        </script>
+    </div>
+
+
+
+    <div class="newTaskForm">
         <form>
             <input type="text" name="taskName" id="taskName"> <br>
             <input type="text" name="taskDescription" id="taskDescription">
         </form>
         <button onclick="createTask()">create task</button>
     </div>
-    <div class="">
-        <table>
-            <tr>
-                <th>To-Do</th>
-                <th>In Progress</th>
-                <th>Done</th>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-        </table>
+    <div class="task">
+        <div class="empty">
+            <div class="fill" draggable="true">yoyo</div>
+        </div>
+        <div class="empty"></div>
+        <div class="empty"></div>
     </div>
 </body>
 
