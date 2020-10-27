@@ -49,7 +49,6 @@ def readDatabase():
 
 @eel.expose
 def writeTaskToDB(name, description):
-    #cursor.execute("INSERT INTO tasks VALUES(name, :name, description, :description, status, 1)", {"name": name, "description": description})
     cursor.execute("INSERT INTO tasks VALUES(null, ?, ?, 1)", (name, description))
     db.commit()
     print("Task: \n{} {}\nerfolgreich eingetragen".format(name, description))
@@ -59,4 +58,4 @@ if __name__ == "__main__":
 
 
 eel.init("www")
-eel.start("index.html")
+eel.start("index.html", mode="none")
