@@ -1,7 +1,8 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { FormBuilder } from '@angular/forms'
 import { Component } from '@angular/core';
 import { toDo, inProgress, done } from "./data";
-import { AppModule } from "./app.module"
+
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,12 @@ export class AppComponent {
   constructor() {
 
   }
+
+  addTask(taskName){
+    this.tasksToDo.push(taskName.viewModel)
+    console.log(this.tasksToDo)
+  }
+
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -37,6 +44,5 @@ export class AppComponent {
                         event.currentIndex);
     }
   }
-
 }
 
